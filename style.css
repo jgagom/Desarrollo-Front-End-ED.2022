@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+body {
+  background-color: #242933;
+  display: flex;
+  font-family: 'Audiowide', sans-serif;
+  color:  #acbae1;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+ 
+}
+
+.container {
+  background-color:  #2f3644;
+  border-radius: 5px;
+  border-width: 2.5px;
+  border-style: solid;
+  border-color:  #363d4f;
+  width: 400px;
+  max-width: 100%;
+  
+}
+
+.header {
+  font-weight: bolder;
+  padding: 30px 40px;
+  margin-bottom: -50px;
+}
+
+.form {
+  padding: 40px 40px;
+}
+.form-control {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+}
+
+.form-control input {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 3%;
+}
+
+.form-control.success input {
+  border: 2px solid #35e016;
+}
+
+.form-control.error input {
+  border: 2px solid #e32424;
+}
+
+.form-control i {
+  position: absolute;
+  top: 27px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  background-image: url('images/success-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 0px center;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  background-image: url('images/error-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 0px center;
+  visibility: visible;
+}
+
+.form-control small {
+  position: absolute;
+  visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: #e32424;
+}
+
+button {
+  background-color:  #6d65f7;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color:  black;
+  padding: 10px 40px;
+  width: 400px;
+  max-width: 100%;
+  cursor: pointer;
+  color: white;
+}
