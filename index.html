@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Form Validation</title>
+	<title>Formulario - Jennifer Gago</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="container">
@@ -19,38 +12,29 @@
       </div>
       <form class="form" id="form">
         <div class="form-control ">
-          <label>Nombre</label>
-          <input type="text" placeholder="Nombre" id="username" />
-          <i class="fa-check-circle"></i>
-          <i class="fa-exclamation-circle"></i>
-          <small>Error Message</small>
+		  <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="username"/>
+		  <small>Error Message</small>
         </div>
 
         <div class="form-control ">
-          <label>Email</label>
-          <input type="email" placeholder="Email" id="email" />
-          <i class="fa-check-circle"></i>
-          <i class="fa-exclamation-circle"></i>
-          <small>Error Message</small>
+		  <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+		  <small>Error Message</small>
         </div>
 
         <div class="form-control">
-          <label>Clave</label>
-          <input type="password" placeholder="Clave" id="password" />
-          <i class="fa-check-circle"></i>
-          <i class="fa-exclamation-circle"></i>
-          <small>Error Message</small>
+		  <label for="clave">Clave</label>
+          <input type="password" name="clave" id="password" />
+		  <small>Error Message</small>
         </div>
 
         <div class="form-control">
-          <label>Confirme su clave</label>
-          <input type="password" placeholder="Confirme su clave" id="password2" />
-          <i class="fa-check-circle"></i>
-          <i class="fa-exclamation-circle"></i>
-          <small>Error Message</small>
+		  <label for="clave2">Confirme su clave</label>
+          <input type="password" name="clave2" id="password2" />
+		  <small>Error Message</small>
         </div>
-
-        <button>Enviar</button>
+        <input type="submit" value="Enviar"/>
       </form>
     </div>
     <script src="./index.js"></script>

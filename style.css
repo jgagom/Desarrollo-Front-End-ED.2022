@@ -36,6 +36,7 @@ body {
 .form {
   padding: 40px 40px;
 }
+
 .form-control {
   margin-bottom: 15px;
   padding-bottom: 15px;
@@ -58,10 +59,20 @@ body {
 
 .form-control.success input {
   border: 2px solid #35e016;
+  background-image: url('images/success-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 290px center;
+  visibility: visible;
 }
 
 .form-control.error input {
   border: 2px solid #e32424;
+  background-image: url('images/error-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 290px center;
+  visibility: visible;
 }
 
 .form-control i {
@@ -71,21 +82,6 @@ body {
   visibility: hidden;
 }
 
-.form-control.success i.fa-check-circle {
-  background-image: url('images/success-icon.svg');
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: 0px center;
-  visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-  background-image: url('images/error-icon.svg');
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: 0px center;
-  visibility: visible;
-}
 
 .form-control small {
   position: absolute;
@@ -97,7 +93,7 @@ body {
     color: #e32424;
 }
 
-button {
+form input[type="submit"]{
   background-color:  #6d65f7;
   border-radius: 5px;
   border-width: 1.5px;

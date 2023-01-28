@@ -1,15 +1,22 @@
-const form = document.getElementById("form");
+const form1 = document.getElementById("form");
 const name = document.getElementById("username");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
+const password1 = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 
 function checkInputs() {
+	
   const nameValue = username.value.trim();
   const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
+  const passwordValue = password1.value.trim();
   const password2Value = password2.value.trim();
+  
+  nameValid=false;
+  emailValid=false;
+  passValid=false;
+  pass2Valid=false;
+  
 
   if (nameValue === "") {
     setError(name, "Rellene este campo");
@@ -22,7 +29,7 @@ function checkInputs() {
 
   if (emailValue === "") {
     setError(email, "Rellene este campo");
-  } else if(!isEmail(emailValue)) {
+  } else if(!isEmailValid(email)) {
     setError(email, "Email inválido");
   } else{
     setSuccess(email);
@@ -30,12 +37,12 @@ function checkInputs() {
   }
 
   if (passwordValue === "") {
-    setError(password, "Rellene este campo");
+    setError(password1, "Rellene este campo");
   } else {
     if (passwordValue.length > 8) {
-      setError(password, "No debe tener más de 8 caracteres");
+      setError(password1, "No debe tener menos de 8 caracteres");
     } else {
-      setSuccess(password);
+      setSuccess(password1);
       passValid = true;
     }
   }
@@ -63,9 +70,13 @@ function setSuccess(input) {
   formControl.className = "form-control success";
 }
 
-function isEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
+function isEmailValid(input) {
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (input.value.match(validRegex)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isNameValid(field) {
@@ -75,12 +86,12 @@ function isNameValid(field) {
 
 function popupConfirm() {
   if (nameValid && emailValid && passValid && pass2Valid) {
-    window.alert("¡Inscripción creada correctamente!");
+    alert("¡Inscripción creada correctamente!");
   }
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+form1.addEventListener("submit",(e) => {
+  e.preventDefault();
   checkInputs();
   popupConfirm();
 });
