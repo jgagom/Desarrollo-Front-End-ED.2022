@@ -1,6 +1,6 @@
 # Desarrollo-Front-End-ED.2022
 
-Lab-Submission
+## Files:
 
 - The HTML script is created in the file called index.html.
 
@@ -10,6 +10,7 @@ Lab-Submission
 
 - A directory called images is created in which I include the two icons corresponding to the positive or negative validations.
 
+## Screenshots
 
 <img src="/images/other images/form.png" style="width:900px">
 <img src="/images/other images/fail.png" style="width:900px">
